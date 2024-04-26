@@ -4,7 +4,7 @@ body{
     font-family: "Poppins", sans-serif;
 
     /* ^lets add some hight quality background image  */
-    background-image: url(./images,audio,vedio/food.jpg);
+    background-image: url(./images,vedio,audio/food.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 
