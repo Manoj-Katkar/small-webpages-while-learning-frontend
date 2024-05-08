@@ -4,6 +4,7 @@ body{
     padding: 0px;
     text-align: center;
     background-color: rgb(240,242,245);
+    
 }
 
 /* img{
@@ -26,7 +27,7 @@ main{
     /* border: 2px solid red; */
     display: flex;
     justify-content: center;
-    height: 75vh;
+    height: 100%;
 
     
     
@@ -36,7 +37,7 @@ form{
     border: 2px solid white;
     border-radius: 10px;
     width: 30%;
-    height: 70%;
+    height: 90%;
     text-align: center;
     background-color: white;
     display: flex;
@@ -81,14 +82,16 @@ button{
     font-size: 20px;
 }
 
-a{
+a{  
+    /* display: inline-block; */
     text-decoration: none;
     color: rgb(48,129,242);
+    margin-bottom: 30px;
     
 }
 
 #anchor-tags{
     display: flex;
-    margin-top: 10px;
+    margin: 15px;
     
 }
