@@ -1,0 +1,256 @@
+/* Modern Creative Design */
+:root {
+    --primary: #2BD2FF;
+    --secondary: #FF2B70;
+    --accent: #2BFF88;
+    --dark: #0A192F;
+    --light: #F5F7FB;
+    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+/* Global Reset with Smooth Scroll */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', 'Inter', sans-serif;
+    background: var(--dark);
+    color: var(--light);
+    line-height: 1.8;
+    padding: 2rem;
+    overflow-x: hidden;
+}
+
+/* Animated Background Particles */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="5" fill="%232BD2FF22"/><circle cx="150" cy="100" r="8" fill="%23FF2B7022"/><circle cx="100" cy="150" r="6" fill="%232BFF8822"/></svg>');
+    z-index: -1;
+    animation: particleAnim 20s linear infinite;
+}
+
+/* Header with Gradient Animation */
+header {
+    background: var(--gradient);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 20px;
+    margin: 2rem auto;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: gradientFlow 8s ease infinite;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+}
+
+/* Main Content Layout */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Section Cards with 3D Effect */
+section {
+    background: rgba(10, 25, 47, 0.9);
+    border: 1px solid rgba(43, 210, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    transform-style: preserve-3d;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+section:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
+    box-shadow: 0 15px 35px rgba(43, 210, 255, 0.2);
+    border-color: var(--primary);
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+section h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 80%;
+    background: var(--gradient);
+    border-radius: 5px;
+}
+
+/* Code Blocks with Neon Effect */
+pre {
+    background: #011627;
+    border: 1px solid rgba(43, 210, 255, 0.2);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+    position: relative;
+}
+
+pre::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(43, 210, 255, 0.1);
+    pointer-events: none;
+}
+
+code {
+    color: #7fdbca;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.95rem;
+}
+
+/* Modern Table Design */
+table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+    background: rgba(10, 25, 47, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(43, 210, 255, 0.1);
+}
+
+th {
+    background: var(--gradient);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tr:hover {
+    background: rgba(43, 210, 255, 0.05);
+}
+
+/* Footer with Wave Animation */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient);
+    animation: wave 2s linear infinite;
+}
+
+/* Keyframe Animations */
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes shine {
+    0% { left: -50%; }
+    100% { left: 150%; }
+}
+
+@keyframes particleAnim {
+    from { transform: translateY(0); }
+    to { transform: translateY(-200px); }
+}
+
+@keyframes wave {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    main {
+        grid-template-columns: 1fr;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+    
+    pre {
+        padding: 1rem;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient);
+    border-radius: 4px;
+}

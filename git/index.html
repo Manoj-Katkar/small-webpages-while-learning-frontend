@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Guide to Git Commands</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Comprehensive Guide to Git Commands</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Introduction to Git</h2>
+            <p>Git is a distributed version control system used by developers to track changes in source code. It allows multiple developers to work on a project efficiently and keeps track of modifications, additions, and deletions.</p>
+        </section>
+        <section>
+            <h2>Basic Git Commands</h2>
+            <h3>Initializing a Repository</h3>
+            <pre><code>git init</code></pre>
+            Repository</h3>
+            <pre><code>git remote add origin &lt;repository_url&gt;</code></pre>
+            <pre><code>git remote -v</code></pre>
+            <h3>Fetching and Checking Out the Main Branch</h3>
+            <pre><code>git fetch origin</code></pre>
+            <pre><code>git checkout main</code></pre>
+            <h3>Checking Status and Staging Changes</h3>
+            <pre><code>git status</code></pre>
+            <pre><code>git add .</code></pre>
+            <h3>Committing and Pushing Changes</h3>
+            <pre><code>git commit -m "Your commit message"</code></pre>
+            <pre><code>git push origin main</code></pre>
+        </section>
+        <section>
+            <h2>Configuring Git User Information</h2>
+            <pre><code>git config user.name</code></pre>
+            <pre><code>git config user.email</code></pre>
+        </section>
+        <section>
+            <h2>Common Terminal Commands for File Management</h2>
+            <pre><code>mkdir folderName</code></pre>
+            <pre><code>ls</code></pre>
+        </section>
+        <section>
+            <h2>Viewing Changes and Commit History</h2>
+            <pre><code>git diff</code></pre>
+            <pre><code>git log</code></pre>
+        </section>
+        <section>
+            <h2>Reverting Changes to the Last Commit</h2>
+            <h3>Steps to Revert to a Previous Commit</h3>
+            <pre><code>git log --oneline</code></pre>
+            <pre><code>git reset --hard &lt;commit_id&gt;</code></pre>
+        </section>
+        <section>
+            <h2>Branching and Merging</h2>
+            <h3>Creating a New Branch</h3>
+            <pre><code>git checkout -b &lt;new_branch_name&gt;</code></pre>
+            <pre><code>git push --set-upstream origin &lt;new_branch_name&gt;</code></pre>
+            <h3>Merging Branches</h3>
+            <p>When you create a pull request, the senior developer or tech lead will review and merge the branch into the main branch.</p>
+            <pre><code>git checkout main</code></pre>
+            <pre><code>git pull origin main</code></pre>
+        </section>
+        <section>
+            <h2>Branch Naming Conventions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Prefix</th>
+                        <th>Purpose</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>wip</td>
+                        <td>Work in progress</td>
+                        <td>wip/new-ui-design</td>
+                    </tr>
+                    <tr>
+                        <td>feat</td>
+                        <td>Adding or expanding a feature</td>
+                        <td>feat/chat-support</td>
+                    </tr>
+                    <tr>
+                        <td>bug</td>
+                        <td>Fixing a bug</td>
+                        <td>bug/fix-login-error</td>
+                    </tr>
+                    <tr>
+                        <td>junk</td>
+                        <td>Experimental changes</td>
+                        <td>junk/test-feature</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Merge vs. Rebase</h2>
+            <p><strong>Merging</strong> is the preferred approach in companies since it keeps a cleaner commit history.</p>
+            <p><strong>Rebasing</strong> is used in special cases where organizations need to track all individual commits made by team members.</p>
+        </section>
+        <section>
+            <h2>Common Git Commands Used in Organizations</h2>
+            <pre><code>git add .</code></pre>
+            <pre><code>git commit -m "commit message"</code></pre>
+            <pre><code>git push</code></pre>
+            <pre><code>git branch</code></pre>
+            <pre><code>git checkout &lt;branch_name&gt;</code></pre>
+            <pre><code>git checkout -b &lt;new_branch_name&gt;</code></pre>
+            <pre><code>git pull</code></pre>
+            <pre><code>git status</code></pre>
+            <pre><code>git merge</code></pre>
+            <pre><code>git revert</code></pre>
+            <pre><code>git diff</code></pre>
+        </section>
+        <section>
+            <h2>Conclusion</h2>
+            <p>Git is an essential tool for version control, ensuring efficient collaboration and tracking of source code changes. Mastering these Git commands will streamline your development workflow and help in better project management.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Comprehensive Guide to Git Commands</p>
+    </footer>
+</body>
+</html>
